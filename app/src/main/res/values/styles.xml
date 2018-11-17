@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Base.Widget.AppCompat.RatingBar.Indicator." parent="Base.Theme.AppCompat">
+
+    </style>
+
+    <style name="SearchAutoCompleteTextView" parent="Widget.AppCompat.Light.AutoCompleteTextView">
+        <item name="android:textColor">@color/searchText</item>
+        <item name="android:textColorHint">@color/underbar</item>
+    </style>
+
+    <style name="Base.V7.Widget.AppCompat.AutoCompleteTextView." parent="Base.Theme.AppCompat">
+        <item name="autoCompleteTextViewStyle">@style/SearchAutoCompleteTextView</item>
+    </style>
+
+    <style name="Base.Widget.AppCompat.EditText." parent="Base.Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/underbar</item>
+        <item name="android:textColorHint">@color/underbar</item>
+    </style>
+
+</resources>

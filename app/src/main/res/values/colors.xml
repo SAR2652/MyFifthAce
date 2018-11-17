@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="profile_border">#DCCB01</color>
+    <color name="background_profile">#2A253E</color>
+    <color name="profile_name">#FFFF00</color>
+    <color name="age">#04F936</color>
+    <color name="searchText">#F6FDFD</color>
+    <color name="border">#E4E4E4</color>
+    <color name="options">#F7F9F9</color>
+    <color name="login_button_bg">#0E61F5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="underbar">#C0C3C7</color>
+</resources>

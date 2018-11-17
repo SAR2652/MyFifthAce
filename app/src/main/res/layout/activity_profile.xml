@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_profile"
+    tools:context=".ProfileActivity">
+
+    <android.support.v7.widget.SearchView
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:text="Search"
+        android:theme="@style/Base.V7.Widget.AppCompat.AutoCompleteTextView."
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:backgroundTint="@color/underbar"
+        android:background="@drawable/search_background"
+        android:inputType="text"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="20dp"
+                android:src="@drawable/primitives"
+                android:foregroundGravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                app:civ_border_color="@color/profile_border"
+                app:civ_border_width="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/profile_name"
+                        android:text="Kunal Vohra"
+                        android:id="@+id/profile_name"
+                        android:textSize="30dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=", 26"
+                        android:textSize="20sp"
+                        android:id="@+id/age"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@id/profile_name"
+                        android:textColor="@color/age"/>
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/shield"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@id/age"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatRatingBar
+                android:id="@+id/rating_bar"
+                style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:numStars="5"
+                android:progressTint="@color/profile_border"
+                android:rating="3"
+                android:stepSize="0.5" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/border" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="10dp"
+                    android:layout_weight="1"
+                    android:text="Check In"
+                    android:textColor="@color/options"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:layout_weight="1"
+                    android:text="Photo/Video"
+                    android:textColor="@color/options"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_weight="1"
+                    android:text="Create a Poll"
+                    android:textColor="@color/options"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/border" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
