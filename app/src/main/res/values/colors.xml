@@ -15,4 +15,10 @@
     <color name="black">#000000</color>
     <color name="transparent">#00000000</color>
     <color name="underbar">#C0C3C7</color>
+    <color name="overall_background">#1D232F</color>
+    <color name="player_search">#FF0000</color>
+    <color name="track_player">#FFEB3B</color>
+    <color name="player_track_underbar">#85898F</color>
+    <color name="quick_links_text">#848B93</color>
+    <color name="search_background">#F2F3F3</color>
 </resources>

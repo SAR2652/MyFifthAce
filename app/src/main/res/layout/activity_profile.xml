@@ -5,19 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/background_profile"
-    tools:context=".ProfileActivity">
-
-    <android.support.v7.widget.SearchView
-        android:layout_margin="8dp"
-        android:layout_width="match_parent"
-        android:text="Search"
-        android:theme="@style/Base.V7.Widget.AppCompat.AutoCompleteTextView."
-        android:layout_height="wrap_content"
-        android:iconifiedByDefault="false"
-        android:backgroundTint="@color/underbar"
-        android:background="@drawable/search_background"
-        android:inputType="text"/>
+    android:background="@color/overall_background"
+    tools:context=".ProfileActivity"
+    tools:showIn="@layout/activity_profile">
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -28,17 +18,24 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/profile_image"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_margin="20dp"
-                android:src="@drawable/primitives"
-                android:foregroundGravity="center_horizontal"
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                app:civ_border_color="@color/profile_border"
-                app:civ_border_width="10dp" />
+                android:background="@drawable/circle">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="20dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:layout_centerHorizontal="true"
+                    app:civ_border_color="@color/background_profile"
+                    app:civ_border_width="9dp"/>
+
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -140,6 +137,6 @@
                 android:background="@color/border" />
 
         </LinearLayout>
-
     </android.support.v4.widget.NestedScrollView>
+
 </LinearLayout>

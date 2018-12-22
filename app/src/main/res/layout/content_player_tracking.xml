@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/overall_background"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".PlayerTrackingActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="116dp"
+        android:src="@drawable/staking_ring" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:paddingStart="20dp"
+        android:paddingRight="20dp"
+        android:src="@drawable/advertise" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:paddingTop="10dp"
+        android:paddingStart="21dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/player_search"
+        android:text="@string/quick_links"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:layout_marginStart="20dp">
+
+        <TextView
+            android:id="@+id/tournament"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tournaments"
+            android:textSize="14sp"
+            android:textColor="@color/quick_links_text"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:gravity="start"
+            android:layout_toEndOf="@id/tournament"
+            android:id="@+id/dot1"
+            android:text="@string/dot"
+            android:textSize="19sp"
+            android:textColor="@color/quick_links_text"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/packs"
+            android:text="@string/packs"
+            android:layout_toEndOf="@id/dot1"
+            android:textSize="14sp"
+            android:textColor="@color/quick_links_text"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dot"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_toEndOf="@id/packs"
+            android:id="@+id/dot2"
+            android:textSize="19sp"
+            android:textColor="@color/quick_links_text"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calendar"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_toEndOf="@id/dot2"
+            android:id="@+id/calendar"
+            android:textSize="14sp"
+            android:textColor="@color/quick_links_text"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:text="@string/funds"
+            android:layout_below="@id/tournament"
+            android:id="@+id/funds"
+            android:textSize="14sp"
+            android:textColor="@color/quick_links_text"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="13dp"
+            android:gravity="center"
+            android:layout_toEndOf="@id/funds"
+            android:id="@+id/dot3"
+            android:text="@string/dot"
+            android:textSize="20sp"
+            android:textColor="@color/quick_links_text"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:text="@string/guide"
+            android:layout_toEndOf="@id/dot3"
+            android:layout_below="@id/packs"
+            android:id="@+id/guide"
+            android:textSize="14sp"
+            android:textColor="@color/quick_links_text"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="13dp"
+            android:gravity="center"
+            android:layout_toEndOf="@id/guide"
+            android:id="@+id/dot4"
+            android:text="@string/dot"
+            android:textSize="19sp"
+            android:textColor="@color/quick_links_text"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:text="@string/tracker"
+            android:layout_toEndOf="@id/dot4"
+            android:layout_below="@id/calendar"
+            android:id="@+id/tracker"
+            android:textSize="14sp"
+            android:textColor="@color/quick_links_text"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:text="@string/streams"
+            android:layout_below="@id/funds"
+            android:id="@+id/streams"
+            android:textSize="14sp"
+            android:textColor="@color/quick_links_text"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:gravity="center"
+            android:layout_toEndOf="@id/streams"
+            android:layout_below="@id/funds"
+            android:id="@+id/dot5"
+            android:text="@string/dot"
+            android:textSize="19sp"
+            android:textColor="@color/quick_links_text"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:text="@string/watchlist"
+            android:layout_toEndOf="@id/dot5"
+            android:layout_below="@id/guide"
+            android:id="@+id/watchlist"
+            android:textSize="14sp"
+            android:textColor="@color/quick_links_text"
+            android:textAllCaps="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/track_player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:text="@string/player_to_track"
+        android:textSize="32sp"
+        android:textColor="@color/track_player"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:paddingLeft="20dp"
+        android:layout_height="1dp"
+        android:background="@color/player_track_underbar"/>
+
+    <EditText
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="20dp"
+        android:inputType="text"
+        android:id="@+id/username"
+        style="@style/Base.Widget.AppCompat.EditText."
+        android:backgroundTint="@color/underbar"
+        android:hint="@string/username"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:paddingBottom="10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:text="@string/search"
+        android:id="@+id/sign_in_button"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:background="@drawable/search_player_bg"/>
+
+</LinearLayout>

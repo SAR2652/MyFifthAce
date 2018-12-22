@@ -3,7 +3,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/overall_background</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
@@ -12,18 +12,36 @@
 
     </style>
 
-    <style name="SearchAutoCompleteTextView" parent="Widget.AppCompat.Light.AutoCompleteTextView">
-        <item name="android:textColor">@color/searchText</item>
-        <item name="android:textColorHint">@color/underbar</item>
-    </style>
-
-    <style name="Base.V7.Widget.AppCompat.AutoCompleteTextView." parent="Base.Theme.AppCompat">
-        <item name="autoCompleteTextViewStyle">@style/SearchAutoCompleteTextView</item>
-    </style>
 
     <style name="Base.Widget.AppCompat.EditText." parent="Base.Widget.AppCompat.EditText">
         <item name="android:textColor">@color/underbar</item>
         <item name="android:textColorHint">@color/underbar</item>
     </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="Theme.MyCompatTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowBackground">@color/winBackground</item>
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+        <item name="actionBarStyle">@style/ActionBar</item>
+    </style>
+
+    <style name="ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/overall_background</item>
+        <item name="background">@color/overall_background</item>
+        <item name="android:displayOptions">useLogo|showHome</item>
+    </style>
+
+    <color name="winBackground">#98cb4a</color>
+    <color name="background">#f76d3c</color>
 
 </resources>

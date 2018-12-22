@@ -1,4 +1,20 @@
 <resources>
     <string name="app_name">MyFifthAce</string>
     <string name="server_clientId">602883721107-p1tm5ih5s6jrn4fmge4514u37oirj8cb.apps.googleusercontent.com</string>
+    <string name="title_activity_player_tracking">PlayerTrackingActivity</string>
+    <string name="player_to_track">TRACK YOUR PLAYER</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="search">Search</string>
+    <string name="sign_in">Sign In</string>
+    <string name="quick_links">Quick Links</string>
+    <string name="tournaments">Tournaments </string>
+    <string name="packs">Top Packs</string>
+    <string name="calendar">Events Calendar</string>
+    <string name="funds">Funds Calculator</string>
+    <string name="guide">Pack Guide</string>
+    <string name="tracker">Player Tracker</string>
+    <string name="streams">Live Streams</string>
+    <string name="watchlist">Watchlist</string>
+    <string name="dot">.</string>
 </resources>

@@ -8,16 +8,6 @@
     android:background="@color/background_profile"
     tools:context=".LoginActivity">
 
-    <android.support.v7.widget.SearchView
-        android:layout_margin="8dp"
-        android:layout_width="match_parent"
-        android:theme="@style/Base.V7.Widget.AppCompat.AutoCompleteTextView."
-        android:layout_height="wrap_content"
-        android:iconifiedByDefault="false"
-        android:backgroundTint="@color/searchText"
-        android:background="@drawable/search_background"
-        android:inputType="text"/>
-
     <View
         android:layout_width="match_parent"
         android:layout_height="150dp"/>
@@ -39,7 +29,7 @@
             android:id="@+id/username"
             style="@style/Base.Widget.AppCompat.EditText."
             android:backgroundTint="@color/underbar"
-            android:hint="Username"/>
+            android:hint="@string/username"/>
 
         <EditText
             android:padding="10dp"
@@ -54,7 +44,7 @@
             android:id="@+id/password"
             android:backgroundTint="@color/underbar"
             style="@style/Base.Widget.AppCompat.EditText."
-            android:hint="Password"/>
+            android:hint="@string/password"/>
 
         <Button
             android:layout_width="match_parent"
@@ -67,7 +57,7 @@
             android:layout_marginBottom="15dp"
             android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content"
-            android:text="Sign in"
+            android:text="@string/sign_in"
             android:id="@+id/sign_in_button"
             android:textAllCaps="false"
             android:textColor="@color/white"
