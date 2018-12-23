@@ -11,5 +11,6 @@ public class ProfileActivity extends BaseMenuActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+
     }
 }

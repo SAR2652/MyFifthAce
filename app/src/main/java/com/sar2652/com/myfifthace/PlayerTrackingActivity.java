@@ -6,19 +6,27 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.view.GravityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class PlayerTrackingActivity extends BaseMenuActivity {
 
+    boolean drawer_open = false;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player_tracking);
+
+        mDrawerLayout = findViewById(R.id.drawer_layout);
+
+
 
         /*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -29,6 +37,17 @@ public class PlayerTrackingActivity extends BaseMenuActivity {
                         .setAction("Action", null).show();
             }
         });*/
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                mDrawerLayout.openDrawer(GravityCompat.START);
+
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 

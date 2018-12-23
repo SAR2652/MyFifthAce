@@ -15,17 +15,17 @@
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".ProfileActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".PlayerTrackingActivity"
             android:label="@string/title_activity_player_tracking"
             android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
