@@ -16,15 +16,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-public class PlayerTrackingActivity extends BaseMenuActivity {
+public class PlayerTrackingActivity extends AppCompatActivity {
 
     boolean drawer_open = false;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player_tracking);
-
-        mDrawerLayout = findViewById(R.id.drawer_layout);
 
 
 
@@ -38,18 +36,6 @@ public class PlayerTrackingActivity extends BaseMenuActivity {
             }
         });*/
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                mDrawerLayout.openDrawer(GravityCompat.START);
-
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
 
 }
 

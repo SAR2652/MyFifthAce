@@ -82,7 +82,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                //.requestIdToken("602883721107-ji46aqdncj40eja3tjk3r5s7vqlq1b9c.app")
+                //.requestServerAuthCode(getResources().getString(R.string.server_client_id))
                 .requestEmail()
                 .build();
 
@@ -97,7 +97,7 @@ public class LoginActivity extends AppCompatActivity {
                 .build();
     }
 
-    public String get_url = URL.domain + "checkUserExistsandLogin";
+    public String get_url = URL.domain + "socialLogin";
     public String JSONResponse;
     public SharedPreferences sharedPreferences;
     public SharedPreferences.Editor editor;
@@ -129,7 +129,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void getInfo(String email, final String firstName, String lastName)
     {
-        final String id=email;
+        final String id = email;
         progressDialog.setMessage("Getting your data...");
         Log.d("url", get_url);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, get_url,
@@ -137,10 +137,10 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         JSONResponse = response;
+                        Log.d("TAG", response);
                         sharedPreferences = getSharedPreferences("user", Context.MODE_PRIVATE);
                         editor = sharedPreferences.edit();
                         progressDialog.setMessage("Response Received");
-                        Log.d("TAG", response);
                         Log.d("Email:", "This is email" + id);
                         try {
                             JSONArray jsonArray = new JSONArray(response);
@@ -154,9 +154,7 @@ public class LoginActivity extends AppCompatActivity {
                             editor.putString("last_name", last_name);
                             editor.commit();
                         }
-                        catch (JSONException e)
-                        {
-                        }
+                        catch (JSONException e){}
                         updateUI("in");
                     }
                 }, new Response.ErrorListener() {
@@ -166,12 +164,12 @@ public class LoginActivity extends AppCompatActivity {
                 //Log.d("Volley Error","Volley Error");
                 //Toast.makeText(LoginActivity.this, "Volley error", Toast.LENGTH_SHORT).show();
                 if(error instanceof ServerError)
-                {Log.d("Error","Server eror");
+                {Log.d("Error","Server error");
                     error.printStackTrace();}
-                else if(error instanceof NetworkError)
-                {Log.d("Error","Network eror");}
+                    if(error instanceof NetworkError)
+                {Log.d("Error","Network error");}
                 if (error instanceof NoConnectionError)
-                {Log.d("Error","No Connection eror");}
+                {Log.d("Error","No Connection error");}
             }
         }) {
             @Override
@@ -181,6 +179,7 @@ public class LoginActivity extends AppCompatActivity {
                 params.put("email", id);
                 params.put("first_name", firstName);
                 params.put("last_name", familyName);
+                params.put("social_login_type", "g");
                 return params;
             }
         };

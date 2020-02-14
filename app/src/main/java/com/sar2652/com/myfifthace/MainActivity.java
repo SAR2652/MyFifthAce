@@ -20,8 +20,6 @@ public class MainActivity extends AppCompatActivity {
     GoogleSignInClient mGoogleSignInClient;
     public int t;
     String url=URL.domain+"retrieveClientData";
-    List<String> listDataHeader;
-    HashMap<String, List<String>> listDataChild;
     SharedPreferences object;
     SharedPreferences.Editor objectedit;
     ProgressDialog progressDialog;
@@ -47,7 +45,5 @@ public class MainActivity extends AppCompatActivity {
         objectedit=object.edit();
 
     }
-
-
 }
 

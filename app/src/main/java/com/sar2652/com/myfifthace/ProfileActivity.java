@@ -4,7 +4,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ProfileActivity extends BaseMenuActivity {
+public class ProfileActivity extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

@@ -45,3 +45,4 @@ android {
         annotationProcessor 'com.google.auto.value:auto-value:1.5.2'
     }
 }
+
